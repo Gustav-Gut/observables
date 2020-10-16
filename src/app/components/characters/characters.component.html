@@ -1,0 +1,10 @@
+<p>characters works!</p>
+
+<ul>
+    <li *ngFor="let character of poolCharacters">
+        name: {{character.name}}
+        <button (click)="characterDetail(character.id)">Go to Detail!</button>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>

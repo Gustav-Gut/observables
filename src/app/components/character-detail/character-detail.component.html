@@ -1,0 +1,17 @@
+<h2>Detail of character's id {{idCharacter}}</h2>
+
+<div *ngIf="character; else emptyId">
+    <img src="{{character.image}}">
+    <ul>
+        <li>Name: {{character.name}}</li>
+        <li>Status: {{character.status}}</li>
+        <li>Gender: {{character.gender}}</li>
+        <li>Specie: {{character.species}}</li>
+    </ul>
+    <button routerLink="/characters">Go back to Characters</button>
+</div>
+
+<ng-template #emptyId>
+    <p>Dostn exist character with the</p>
+    <button routerLink="/characters">Go back to Characters</button>
+</ng-template>
